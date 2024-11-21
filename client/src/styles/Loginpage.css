@@ -1,0 +1,116 @@
+/* General Page Styling */
+.login-page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6e93d6, #b9d4f5);
+    font-family: 'Arial', sans-serif;
+    color: #2c3e50;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 20px;
+}
+
+/* Form Container */
+.login-form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Form Header */
+.login-form h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+/* Labels and Inputs */
+.login-form .ant-form-item-label label {
+    color: #2c3e50 !important;
+    font-weight: 600;
+}
+
+.login-form input {
+    border-radius: 5px;
+    border: 1px solid #d1d9e6;
+    padding: 10px;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #6e93d6;
+    box-shadow: 0 0 3px rgba(110, 147, 214, 0.5);
+}
+
+/* Buttons */
+.login-form button {
+    background-color: #6e93d6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #4a74b3;
+    color: #ffffff;
+}
+
+/* Links */
+.login-form a {
+    color: #6e93d6 !important;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-form a:hover {
+    color: #4a74b3 !important;
+    text-decoration: underline;
+}
+
+/* Image Styling */
+.login-page img {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .login-page .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-form {
+        width: 90%;
+        margin: 20px 0;
+    }
+
+    .login-page img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
