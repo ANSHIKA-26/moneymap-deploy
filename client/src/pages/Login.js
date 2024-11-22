@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Spinner from "../components/Spinner";
 import "../styles/Loginpage.css";
+axios.defaults.baseURL = 'https://moneymap-deploy-production.up.railway.app';
+
 const Login = () => {
   const img =
     "https://images.unsplash.com/photo-1593538312308-d4c29d8dc7f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80";
@@ -21,6 +23,7 @@ const Login = () => {
         JSON.stringify({ ...data.user, password: "" })
       );
       navigate("/");
+      console.log(values);
     } catch (error) {
       setLoading(false);
       message.error("something went wrong");

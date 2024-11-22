@@ -17,6 +17,14 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors());
 
+// Hello endpoint
+app.get('/api/v1/hello', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "Hello, the backend is working!",
+  });
+});
+
 app.use("/api/v1/users", require("./routes/userRoute"));
 app.use("/api/v1/transactions", require("./routes/transactionRoute"));
 
